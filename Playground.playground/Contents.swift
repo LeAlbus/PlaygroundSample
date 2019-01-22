@@ -22,6 +22,7 @@ func >< (lhs: Int, rhs: Int) -> Set<Int>{
     
     var tempSet: Set<Int> = []
     
+    //DoWhile loop
     repeat{
         tempSet.insert(Int.random(in: 0 ... universeSize))
     }while (tempSet.count < lhs)
@@ -48,8 +49,11 @@ func >=< (lhs: Int, rhs: Int) -> Set<Int>?{
         return nil
     }
     
+    //Creates and fills an array with all values on the selected universe
+    //This avoids falling into infinite loop
     var universeSet: [Int] = []
     
+    //Swift for loop
     for i in 1...rhs{
         
         universeSet.append(i)
@@ -57,6 +61,7 @@ func >=< (lhs: Int, rhs: Int) -> Set<Int>?{
     
     var tempSet: Set<Int> = []
     
+    //DoWhile loop
     repeat{
         
         let chosen = Int.random(in: 0 ... (universeSet.count-1))
