@@ -30,7 +30,7 @@ func >< (lhs: Int, rhs: Int) -> Set<Int>{
     return tempSet
 }
 
-sortedElements = 6 >< 60
+sortedElements = elementsToSort >< universeSize
 print (sortedElements)
 
 infix operator >=<
@@ -76,7 +76,7 @@ func >=< (lhs: Int, rhs: Int) -> Set<Int>?{
 
 
 
-if let sortedElements = 9>=<60{
+if let sortedElements = elementsToSort >=< universeSize{
     print (sortedElements)
 } else {
     print ("Something went wrong")
