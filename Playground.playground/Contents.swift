@@ -24,7 +24,7 @@ func >< (lhs: Int, rhs: Int) -> Set<Int>{
     
     //DoWhile loop
     repeat{
-        tempSet.insert(Int.random(in: 0 ... universeSize))
+        tempSet.insert(Int.random(in: 0 ... rhs))
     }while (tempSet.count < lhs)
     
     return tempSet
